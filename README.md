@@ -1,4 +1,8 @@
-# Allotment Wiki Rendering
+<p align=center>
+<img src="readme_files/elder_log.png" alt="Icon">
+</p>
+
+<h1 align=center>Allotment Wiki Rendering</h1>
 
 This is an internal tool used to batch-render all previews of blocks for the Allotment wiki. I though it might be useful to at least one person out there, so I'm publishing it here.
 
