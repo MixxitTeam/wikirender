@@ -1,0 +1,7 @@
+TextureDir.mc=C:\Users\jonas\AppData\Roaming\.minecraft\versions\1.16.5\1.16.5\assets\minecraft\textures\block
+TextureDir.am=E:\Development\Minecraft\Modding\Forge\GardeningMod\src\main\resources\assets\allotment\textures\block
+Resolutions=256,32
+Brightness.RightFace=0.396078431372549
+Brightness.LeftFace=0.6862745098039216
+Brightness.TopFace=1
+UseFallbackTexture=False
