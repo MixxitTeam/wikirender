@@ -8,12 +8,12 @@ This is an internal tool used to batch-render all previews of blocks for the All
 
 ## Requirements
 
-This *should* work on pretty much any OS, although it was only tested on Windows 10.
+This *should* work on pretty much any OS that can run PHP and Blender, although it was only tested on Windows 10 and Ubuntu 20.04.
 
 In terms of software installed, you need:
 
 * Blender 2.93 or newer (tested with Blender 2.93)
-* PHP 7.4 or newer (tested with PHP 7.4.1)
+* PHP 7.4 or newer (tested with PHP 7.4.1 (Win) and 7.4.3 (Linux))
 
 Please note that PHP must be in your `%PATH%`/`$PATH`. To verify this, open a command prompt/terminal
 and type `php -v`. Alternatively, the script `renderall.bat`/`renderall.sh` has to be changed to
