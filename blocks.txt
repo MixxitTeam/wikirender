@@ -209,6 +209,12 @@ fence		allotment/dried_babmboo_fence.png		am:dried_bamboo_block_side
 gutter		allotment/gutter.png				am:gutter
 [end: gutter]
 
+[begin: stairs]
+stairs		allotment/elder_stairs.png			am:elder_planks			am:elder_planks			am:elder_planks
+stairs		allotment/bamboo_stairs.png			am:bamboo_block_side		am:bamboo_block_side		am:bamboo_block_side
+stairs		allotment/dried_bamboo_stairs.png		am:dried_bamboo_block_side	am:dried_bamboo_block_side	am:dried_bamboo_block_side
+[end: stairs]
+
 # - Tests
 [begin: tests]
 tallflower	test/test0.png					mc:debug			mc:debug2
