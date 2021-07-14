@@ -29,6 +29,8 @@ def get_caller_info():
 THISDRIVER = get_caller_info()
 log("Driver name: " + THISDRIVER + "-"*20)
 
+__onlygroup = sys.argv[-1] if len(sys.argv) >= 2 and sys.argv[-2] == "--only-group" else False
+
 def list_unique(seq):
     seen = set()
     seen_add = seen.add
@@ -53,14 +55,28 @@ with open("vars.txt", "r") as f:
 lnsBlocks = strBlocks.split("\n")
 blockData = []
 
+currGroupName = None
+
 # TODO Groups!
 for ln in lnsBlocks:
     if (ln.startswith("#") or ln.startswith("//") or ln.strip(" \t\r\n") == ""):
         continue
+    if ln.startswith("[begin: ") and ln.endswith("]"):
+        if __onlygroup != False and currGroupName == None:
+            # start of group
+            currGroupName = ln[8:-1]
+        continue
+    if ln.startswith("[end: ") and ln.endswith("]"):
+        if __onlygroup != False and currGroupName != None and ln == "[begin: " + currGroupName + "]":
+            # end of group
+            currGroupName = None
+        continue
     fields = re.split(r"\t+", ln)
     if fields[0] != THISDRIVER:
         continue
-    blockData.append(fields[1:])
+
+    if (__onlygroup == False) or (__onlygroup != False and currGroupName == __onlygroup):
+        blockData.append(fields[1:])
 
 lnsVars = strVars.split("\n")
 vvars = {}

@@ -132,10 +132,10 @@ tallflower	allotment/tall_thistle.png		am:tall_thistle_top		am:tall_thistle_bott
 
 
 # - Tests
-#[begin: Tests]
+[begin: Tests]
 tallflower	test/test0.png				mc:debug			mc:debug2
 block		test/test1.png				mc:doesnotexist			mc:doesnotexist			mc:doesnotexist
 flower		test/test2.png				mc:doesnotexist			mc:doesnotexist			mc:doesnotexist
 slab		test/test3.png				mc:doesnotexist			mc:doesnotexist			mc:doesnotexist
 tallflower	test/test4.png				mc:doesnotexist			mc:doesnotexist			mc:doesnotexist
-#[end: Tests]
+[end: Tests]

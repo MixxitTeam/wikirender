@@ -45,6 +45,18 @@ PS > .\renderall.bat
 
 for PowerShell.
 
+To execute a single group named `Group` use:
+
+```
+>renderall --only-group Group
+```
+
+or
+
+```
+PS > .\renderall.bat --only-group Group
+```
+
 On GNU/Linux and other *NIX systems you probably first have to make the `renderall.sh` script executable by using the following command:
 
 ```
@@ -57,10 +69,22 @@ You then only have to call the script by using
 $ ./renderall.sh
 ```
 
+or to execute a single group named `Group`:
+
+```
+$ ./renderall.sh --only-group Group
+```
+
 Alternatively, you can also directly call the PHP script by using
 
 ```
 php renderall.php
+```
+
+or to execute a single group named `Group`:
+
+```
+php renderall.php --only-group Group
 ```
 
 ### Drivers
@@ -80,13 +104,20 @@ opened by any text editor. Please make sure to set your editor to indent using *
 
 The file has a pretty straight-forward structure:  
 * Lines end with `\n`
-* Line comments start with either `#` or `//`
+* Line comments start with either `#` or `//` (the line has to start with the comment token)
 * There are no block comments
 * Empty lines are ignored (an empty line is a line with just 0 or more ASCII whitespace characters (namely `SPACE`, `\t`, `\r` or `\n`))
-* Each line contains the following fields, each separated by one or more `\t`, in the following order:
+* Each line contains either a comment, a block entry or a group delimiter
+* A block entry line contains the following fields, each separated by one or more `\t`, in the following order:
   * The driver name (for a full list of drivers, see `doc/drivers.txt`)
   * The output file path (including `.png` extension) relative to this folder. These files will be placed inside of an `output/<resolution>` folder. So `allotment/elder_planks.png` for example might result in `output/256/allotment/elder_planks.png`. (More on resolution sub folders below)
   * One or more texture identifiers. These consist of a *texture source* and a *texture name*. The identifier has the following format: `<source>:<name>`. Sources are folders in which textures files can be referenced from and are defined inside of `vars.txt` (see below). In addition to these sources, drivers also should provide a source called `in`, which points to the `input/` folder. This can be used to reference textures which are not part of Minecraft or a mod.
+* A group delimiter looks like this:
+  * `[begin: MyGroupName]` to start a group named `MyGroupName`
+  * `[end: MyGroupName]` to end a group named `MyGroupName`
+* Groups cannot be nested
+* By default, all groups are executed. However, a only single group can be executed by adding the command line switch `--only-group` to the
+  command, like mentioned above.
 
 With this in mind, here is an example of how a line in `blocks.txt` might look like:
 
@@ -98,7 +129,7 @@ block	minecraft/oak_log.png	mc:oak_log	mc:oak_log	mc:oak_log_top
 
 Settings are stored inside a file called `vars.txt`. This file has a simple key-value pair structure.
 * Lines end with `\n`
-* Line comments begin with either `#` or `//`
+* Line comments begin with either `#` or `//` (the line has to start with the comment token)
 * Empty lines are ignored (an empty line is a line with just 0 or more ASCII whitespace characters (namely `SPACE`, `\t`, `\r` or `\n`))
 * There are no block comments
 * Each line contains one key-value pair

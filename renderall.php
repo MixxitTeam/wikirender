@@ -47,14 +47,18 @@ for ($i = 1; $i < $argc; ++$i) {
   }
 }
 
+$onlyGroup = false;
+
 if (isset($args["--only-group"])) {
   fwrite(STDERR, "Only running group " . $args["--only-group"] . PHP_EOL);
-
+  $onlyGroup = $args["--only-group"];
 }
 
 foreach ($drivers as $driver) {
   fwrite(STDERR, "[>> Driver: ${driver} >>]" . PHP_EOL);
   $cmd = BLENDER_PATH . " --python-use-system-env --factory-startup " . DRIVER_DIR . "${driver}/${driver}.blend -b -P " . DRIVER_DIR . "${driver}/${driver}.py";
+  if ($onlyGroup !== false)
+    $cmd .= " -- --only-group " . escapeshellarg($onlyGroup);
   passthru($cmd);
   fwrite(STDERR, "[<< OK <<]" . PHP_EOL);
 }
