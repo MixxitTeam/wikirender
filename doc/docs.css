@@ -1,0 +1,95 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+body {
+  margin: 0 auto;
+  padding: 12px;
+  max-width: 50em;
+  font: 10pt/1.5 sans-serif;
+}
+header {
+  background-color: #def;
+  margin: -12px -12px 12px;
+  padding: 12px;
+}
+code {
+  padding: 2px;
+  background-color: #eee;
+  border-radius: 2px;
+  border: 1px solid #ccc;
+}
+pre {
+  padding: 8px;
+  background-color: #eee;
+  border-radius: 2px;
+  border: 1px solid #ccc;
+  overflow: auto;
+  max-height: 350px;
+}
+pre>code {
+  background-color: none;
+  padding: 0;
+  border: 0;
+}
+h1 {
+  text-align: center;
+}
+a {
+  color: #00f;
+}
+p {
+  text-align: justify;
+}
+table {
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+thead {
+  background-color: #ccc;
+}
+tbody>tr:nth-child(even) {
+  background-color: #eee;
+}
+th, td {
+  padding: 8px;
+}
+.fs {
+  text-align: center;
+  margin: 1em 0;
+}
+.fs>ul {
+  text-align: left;
+  display: inline-block;
+  margin: 0;
+}
+.fs>ul, .fs>ul ul {
+  list-style-type: none;
+  padding: 0;
+}
+.fs>ul ul li {
+  padding-left: 24px;
+  position: relative;
+}
+.fs>ul ul li::before {
+  content: "";
+  display: block;
+  width: 16px;
+  height: 8px;
+  border-left: 1px dotted;
+  border-bottom: 1px dotted;
+  position: absolute;
+  left: 8px;
+  top: 2px;
+}
+@media print {
+  body {
+    max-width: none;
+  }
+  header {
+    display: none;
+  }
+  a[href^="#"] {
+    color: inherit;
+    text-decoration: none;
+  }
+}

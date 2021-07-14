@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>Create a driver</title>
+    <link rel="stylesheet" href="docs.css">
+</head>
+<body>
+    <header>
+        <a href="index.htm">&larr;&nbsp;Back to index</a>
+    </header>
+    <main>
+        <h1>Create a driver</h1>
+        <p>
+            To create a driver, create a folder inside of the <code>drivers/</code> folder.
+            Inside of there create a new Python file and Blend file, each with
+            the same filename as the containing folder. So if you have created
+            a folder named <q>mydriver/</q>, you would create a file <q>mydriver.py</q>
+            and <q>mydriver.blend</q>. Your file structure should now look something like
+            this:
+        </p>
+        <div class="fs">
+            <ul>
+                <li>
+                    <span>📂 wikirender/</span>
+                    <ul>
+                        <li>
+                            <span>📂 drivers/</span>
+                            <ul>
+                                <li>
+                                    <span>📂 mydriver/</span>
+                                    <ul>
+                                        <li>🟠 mydriver.blend</li>
+                                        <li>📄 mydriver.py</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <p>
+            Inside of the Python file, you have to import the common module by
+            using the following lines of code:
+        </p>
+        <pre><code>sys.path.insert(1, os.path.abspath(&quot;./&quot;))
+from drivercommon import *</code></pre>
+        <p>
+            The following globals will then be accessible:
+        </p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>THISDRIVER</code></td>
+                    <td>String</td>
+                    <td>Contains the name of the driver</td>
+                </tr>
+                <tr>
+                    <td><code>dryRun</code></td>
+                    <td>Boolean</td>
+                    <td>Whether or not to actually render</td>
+                </tr>
+                <tr>
+                    <td><code>vvars</code></td>
+                    <td>Dict</td>
+                    <td>All settings from vars.txt</td>
+                </tr>
+                <tr>
+                    <td><code>blockData</code></td>
+                    <td>List</td>
+                    <td>All block data, <a href="#blockdata">see below</a></td>
+                </tr>
+                <tr>
+                    <td><code>texSources</code></td>
+                    <td>Dict</td>
+                    <td>All texture sources</td>
+                </tr>
+                <tr>
+                    <td><code>resolutions</code></td>
+                    <td>List</td>
+                    <td>The resolutions to render at</td>
+                </tr>
+                <tr>
+                    <td><code>UseFallbackTex</code></td>
+                    <td>Boolean</td>
+                    <td>Whether to use fallback texture</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2 id="blockdata">Blockdata</h2>
+        <p>
+            The blockData global contains a list of lists which contain all
+            fields of a line in <q>blocks.txt</q> except the driver name. So if a
+            line in <q>blocks.txt</q> looks like this:
+        </p>
+        <pre><code>block	minecraft/oak_log.png	mc:oak_log	mc:oak_log	mc:oak_log_top</code></pre>
+        <p>
+            The corresponding item in blockData will look like this:
+        </p>
+        <pre><code>[
+    &quot;minecraft/oak_log.png&quot;,
+    &quot;mc:oak_log&quot;,
+    &quot;mc:oak_log&quot;,
+    &quot;mc:oak_log_top&quot;
+]</code></pre>
+        <h2 id="loggin">Logging</h2>
+        <p>
+            Also please note that every log output has to be output to STDERR
+            instead of STDOUT. To make this easier, a "log" function is available.
+            Instead of having to write this:
+        </p>
+        <pre><code>import sys
+print(&quot;Hello, world!&quot;, file=sys.stderr)</code></pre>
+        <p>you can just write this:</p>
+        <pre><code>log(&quot;Hello, world&quot;)</code></pre>
+        <p>
+            To omit the line break at the end, you can just use the same method as
+            with print:
+        </p>
+        <pre><code>log(&quot;This will not include a line break&quot;, end=&quot;&quot;)</code></pre>
+    </main>
+</body>
+</html>

@@ -19,6 +19,10 @@ Please note that PHP must be in your `%PATH%`/`$PATH`. To verify this, open a co
 and type `php -v`. Alternatively, the script `renderall.bat`/`renderall.sh` has to be changed to
 include the full path of PHP.
 
+This repository also contains an [.editorconfig](https://editorconfig.org/) file to specify line endings, encoding and indentation size,
+so an editor with support for EditorConfig is recommended. (See [here](https://editorconfig.org/#pre-installed) for a list of editors that
+support it out of the box or [here](https://editorconfig.org/#download) for a list of editors with official plugins available)
+
 ## Usage
 
 ### Setting up Blender path
@@ -78,8 +82,8 @@ The file has a pretty straight-forward structure:
 * Lines end with `\n`
 * Line comments start with either `#` or `//`
 * There are no block comments
-* Empty lines are ignored (an empty line is a line with only 0 or more ASCII whitespace characters (namely `SPACE`, `TAB`, `\r` or `\n`))
-* Each line contains the following fields, each separated by one or more `TAB`, in the following order:
+* Empty lines are ignored (an empty line is a line with just 0 or more ASCII whitespace characters (namely `SPACE`, `\t`, `\r` or `\n`))
+* Each line contains the following fields, each separated by one or more `\t`, in the following order:
   * The driver name (for a full list of drivers, see `doc/drivers.txt`)
   * The output file path (including `.png` extension) relative to this folder. These files will be placed inside of an `output/<resolution>` folder. So `allotment/elder_planks.png` for example might result in `output/256/allotment/elder_planks.png`. (More on resolution sub folders below)
   * One or more texture identifiers. These consist of a *texture source* and a *texture name*. The identifier has the following format: `<source>:<name>`. Sources are folders in which textures files can be referenced from and are defined inside of `vars.txt` (see below). In addition to these sources, drivers also should provide a source called `in`, which points to the `input/` folder. This can be used to reference textures which are not part of Minecraft or a mod.
@@ -95,6 +99,7 @@ block	minecraft/oak_log.png	mc:oak_log	mc:oak_log	mc:oak_log_top
 Settings are stored inside a file called `vars.txt`. This file has a simple key-value pair structure.
 * Lines end with `\n`
 * Line comments begin with either `#` or `//`
+* Empty lines are ignored (an empty line is a line with just 0 or more ASCII whitespace characters (namely `SPACE`, `\t`, `\r` or `\n`))
 * There are no block comments
 * Each line contains one key-value pair
 * The beginning of a value is denoted by an equals sign (`=`)
@@ -108,12 +113,12 @@ The settings file must contain the following settings:
   
   This contains a list of resolutions (in pixels) which should be output
 * `Brightness.RightFace`  
-  Default value: `0.396078431372549`  
+  Default value: `0.396078431372549` (equals to 101&frasl;255)  
   Type: Number  
   
   Indicates the brightness of the right block face, where 1.0 is as bright as the texture and 0.0 is fully black.
 * `Brightness.LeftFace`  
-  Default value: `0.6862745098039216`  
+  Default value: `0.6862745098039216` (equals to 175&frasl;255)  
   Type: Number  
 
   Indicates the brightness of the left block face, where 1.0 is as bright as the texture and 0.0 is fully black.

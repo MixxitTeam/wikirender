@@ -3,7 +3,7 @@
 # vi: set shiftwidth=8 tabstop=8 noexpandtab:
 # :indentSize=8:tabSize=8:noTabs=false:
 
-# For further explanation of the texture indices, see the documentation of the corresponding driver inside of doc/drivers.txt
+# For further explanation of the texture indices, see the documentation of the corresponding driver inside of doc/drivers.htm
 # Driver	Output file		      Textures: 0				1				2
 
 # - Vanilla
@@ -120,6 +120,7 @@ block		allotment/pincussion_moss.png		am:pincussion_moss		am:pincussion_moss		am
 block		allotment/spanish_moss.png		am:spanish_moss			am:spanish_moss			am:spanish_moss
 block		allotment/straw_block.png		am:straw_block			am:straw_block			am:straw_block
 block		allotment/elder_leaves.png		in:elder_leaves			in:elder_leaves			in:elder_leaves
+block		allotment/lawn_block.png		in:grass_block_side		in:grass_block_side		in:lawn_block
 
 flower		allotment/anemone.png			am:anemone
 
@@ -128,3 +129,13 @@ slab		allotment/dried_bamboo_slab.png		am:dried_bamboo_block_side	am:dried_bambo
 slab		allotment/elder_slab.png		am:elder_planks			am:elder_planks			am:elder_planks
 
 tallflower	allotment/tall_thistle.png		am:tall_thistle_top		am:tall_thistle_bottom
+
+
+# - Tests
+#[begin: Tests]
+tallflower	test/test0.png				mc:debug			mc:debug2
+block		test/test1.png				mc:doesnotexist			mc:doesnotexist			mc:doesnotexist
+flower		test/test2.png				mc:doesnotexist			mc:doesnotexist			mc:doesnotexist
+slab		test/test3.png				mc:doesnotexist			mc:doesnotexist			mc:doesnotexist
+tallflower	test/test4.png				mc:doesnotexist			mc:doesnotexist			mc:doesnotexist
+#[end: Tests]

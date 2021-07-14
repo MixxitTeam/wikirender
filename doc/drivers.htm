@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>List of included drivers</title>
+    <link rel="stylesheet" href="docs.css">
+</head>
+<body>
+    <header>
+        <a href="index.htm">&larr;&nbsp;Back to index</a>
+    </header>
+    <main>
+        <h1>List of included drivers</h1>
+        <h2>Block</h2>
+        <p>For rendering a full block. Does support full alpha transparency.</p>
+        <p>Driver name: <code>block</code></p>
+        <p>Indices:</p>
+        <ul>
+            <li><code>0</code> &ndash; Right face</li>
+            <li><code>1</code> &ndash; Left face</li>
+            <li><code>2</code> &ndash; Top face</li>
+        </ul>
+
+        <h2>Slab</h2>
+        <p>For rendering a half slab. Does support full alpha transparency.</p>
+        <p>Driver name: <code>slab</code></p>
+        <p>Indices:</p>
+        <ul>
+            <li><code>0</code> &ndash; Right face</li>
+            <li><code>1</code> &ndash; Left face</li>
+            <li><code>2</code> &ndash; Top face</li>
+        </ul>
+
+        <h2>Flower</h2>
+        <p>For rendering a small (1-block) flower/plant. Only supports alpha cutout (threshold is 0.5).</p>
+        <p>Driver name: <code>flower</code></p>
+        <p>Indices:</p>
+        <ul>
+            <li><code>0</code> &ndash; Flower texture</li>
+        </ul>
+
+        <h2>Tall Flower</h2>
+        <p>For rendering a double (2-block) flower/plant. Only supports alpha cutout (threshold is 0.5).</p>
+        <p>Driver name: <code>tallflower</code></p>
+        <p>Indices:</p>
+        <ul>
+            <li><code>0</code> &ndash; Texture for top half</li>
+            <li><code>1</code> &ndash; Texture for bottom half</li>
+        </ul>
+    </main>
+</body>
+</html>

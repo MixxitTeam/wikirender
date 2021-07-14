@@ -1,3 +1,4 @@
 #!/usr/bin/bash
 
-php renderall.php
+export PYTHONUNBUFFERED=on
+php renderall.php $@ 2>&1 > /dev/null
