@@ -7,6 +7,7 @@
 # Driver	Output file			      Textures: 0				1				2
 
 # - Vanilla
+[begin: vanilla]
 block		minecraft/oak_log.png				mc:oak_log			mc:oak_log			mc:oak_log_top
 block		minecraft/birch_log.png				mc:birch_log			mc:birch_log			mc:birch_log_top
 block		minecraft/jungle_log.png			mc:jungle_log			mc:jungle_log			mc:jungle_log_top
@@ -15,7 +16,6 @@ block		minecraft/acacia_log.png			mc:acacia_log			mc:acacia_log			mc:acacia_log_
 block		minecraft/dark_oak_log.png			mc:dark_oak_log			mc:dark_oak_log			mc:dark_oak_log_top
 block		minecraft/crimson_stem.png			in:crimson_stem			in:crimson_stem			mc:crimson_stem_top
 block		minecraft/warped_stem.png			in:warped_stem			in:warped_stem			mc:warped_stem_top
-
 block		minecraft/stripped_oak_log.png			mc:stripped_oak_log		mc:stripped_oak_log		mc:stripped_oak_log_top
 block		minecraft/stripped_birch_log.png		mc:stripped_birch_log		mc:stripped_birch_log		mc:stripped_birch_log_top
 block		minecraft/stripped_jungle_log.png		mc:stripped_jungle_log		mc:stripped_jungle_log		mc:stripped_jungle_log_top
@@ -85,7 +85,18 @@ block		minecraft/green_stained_glass.png		mc:green_stained_glass		mc:green_stain
 block		minecraft/red_stained_glass.png			mc:red_stained_glass		mc:red_stained_glass		mc:red_stained_glass
 block		minecraft/black_stained_glass.png		mc:black_stained_glass		mc:black_stained_glass		mc:black_stained_glass
 
+fence		minecraft/acacia_fence.png			mc:acacia_planks
+fence		minecraft/birch_fence.png			mc:birch_planks
+fence		minecraft/crimson_fence.png			mc:crimson_planks
+fence		minecraft/dark_oak_fence.png			mc:dark_oak_planks
+fence		minecraft/jungle_fence.png			mc:jungle_planks
+fence		minecraft/oak_fence.png				mc:oak_planks
+fence		minecraft/spruce_fence.png			mc:spruce_planks
+fence		minecraft/warped_fence.png			mc:warped_planks
+[end: vanilla]
+
 # - Allotment
+[begin: blocks]
 block		allotment/bamboo_block.png			am:bamboo_block_side		am:bamboo_block_side		am:bamboo_block_end
 block		allotment/dried_bamboo_block.png		am:dried_bamboo_block_side	am:dried_bamboo_block_side	am:dried_bamboo_block_end
 block		allotment/elder_planks.png			am:elder_planks			am:elder_planks			am:elder_planks
@@ -121,7 +132,9 @@ block		allotment/spanish_moss.png			am:spanish_moss			am:spanish_moss			am:spani
 block		allotment/straw_block.png			am:straw_block			am:straw_block			am:straw_block
 block		allotment/elder_leaves.png			in:elder_leaves			in:elder_leaves			in:elder_leaves
 block		allotment/lawn_block.png			in:grass_block_side		in:grass_block_side		in:lawn_block
+[end: blocks]
 
+[begin: flowers]
 flower		allotment/forget_me_not.png			am:forget_me_not
 flower		allotment/small_peony.png			am:small_peony
 flower		allotment/coral_small_peony.png			am:coral_small_peony
@@ -160,10 +173,13 @@ flower		allotment/white_anthurium.png			am:white_anthurium
 flower		allotment/white_narcissus.png			am:white_narcissus
 flower		allotment/yellow_narcissus.png			am:yellow_narcissus
 flower		allotment/false_shamrock.png			am:false_shamrock
+[end: flowers]
 
+[begin: slab]
 slab		allotment/bamboo_slab.png			am:bamboo_block_side		am:bamboo_block_side		am:bamboo_block_end
 slab		allotment/dried_bamboo_slab.png			am:dried_bamboo_block_side	am:dried_bamboo_block_side	am:dried_bamboo_block_end
 slab		allotment/elder_slab.png			am:elder_planks			am:elder_planks			am:elder_planks
+[end: slab]
 
 [begin: tallflower]
 tallflower	allotment/crown_imperial.png			am:crown_imperial_top		am:crown_imperial_bottom
@@ -189,6 +205,10 @@ fence		allotment/babmboo_fence.png			am:bamboo_block_side
 fence		allotment/dried_babmboo_fence.png		am:dried_bamboo_block_side
 [end: fence]
 
+[begin: gutter]
+gutter		allotment/gutter.png				am:gutter
+[end: gutter]
+
 # - Tests
 [begin: tests]
 tallflower	test/test0.png					mc:debug			mc:debug2
@@ -200,4 +220,5 @@ tallflower	test/test4.png					mc:debug			mc:debug
 thinfence	test/test5.png					mc:debug
 fence		test/test6.png					mc:debug
 face		test/test7.png					mc:debug
+gutter		test/test8.png					mc:debug
 [end: tests]

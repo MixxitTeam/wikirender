@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>README</title>
+    <link rel="stylesheet" href="docs.css">
+</head>
+<body>
+    <header></header>
+    <main>
+        <p style="text-align:center">
+        <img src="../readme_files/elder_log.png" alt="Icon">
+        </p>
+
+        <h1 style="text-align:center">Allotment Wiki Rendering</h1>
+
+        <p>This is an internal tool used to batch-render all previews of blocks for the Allotment wiki. I though it might be useful to at least one person out there, so I&#39;m publishing it here.</p>
+        <h2 id="requirements">Requirements</h2>
+        <p>This <em>should</em> work on pretty much any OS that can run PHP and Blender, although it was only tested on Windows 10 and Ubuntu 20.04.</p>
+        <p>In terms of software installed, you need:</p>
+        <ul>
+        <li>Blender 2.93 or newer (tested with Blender 2.93)</li>
+        <li>PHP 7.4 or newer (tested with PHP 7.4.1 (Win) and 7.4.3 (Linux))</li>
+        </ul>
+        <p>Please note that PHP must be in your <code>%PATH%</code>/<code>$PATH</code>. To verify this, open a command prompt/terminal
+        and type <code>php -v</code>. Alternatively, the script <code>renderall.bat</code>/<code>renderall.sh</code> has to be changed to
+        include the full path of PHP.</p>
+        <p>This repository also contains an <a href="https://editorconfig.org/">.editorconfig</a> file to specify line endings, encoding and indentation size,
+        so an editor with support for EditorConfig is recommended. (See <a href="https://editorconfig.org/#pre-installed">here</a> for a list of editors that
+        support it out of the box or <a href="https://editorconfig.org/#download">here</a> for a list of editors with official plugins available)</p>
+        <h2 id="usage">Usage</h2>
+        <h3 id="setting-up-blender-path">Setting up Blender path</h3>
+        <p>First of all, open up <code>vars.php</code> and edit the definition for <code>BLENDER_PATH</code> to point to your Blender executable.</p>
+        <h3 id="executing">Executing</h3>
+        <p>On Windows, open a command prompt or PowerShell inside of this folder and execute:</p>
+        <pre><code>&gt;renderall</code></pre>
+        <p>for CMD or</p>
+        <pre><code>PS &gt; .\renderall.bat</code></pre>
+        <p>for PowerShell.</p>
+        <p>To execute a single group named <code>Group</code> use:</p>
+        <pre><code>&gt;renderall --only-group Group</code></pre>
+        <p>or</p>
+        <pre><code>PS &gt; .\renderall.bat --only-group Group</code></pre>
+        <p>On GNU/Linux and other *NIX systems you probably first have to make the <code>renderall.sh</code> script executable by using the following command:</p>
+        <pre><code>$ chmod +x ./renderall.sh</code></pre>
+        <p>You then only have to call the script by using</p>
+        <pre><code>$ ./renderall.sh</code></pre>
+        <p>or to execute a single group named <code>Group</code>:</p>
+        <pre><code>$ ./renderall.sh --only-group Group</code></pre>
+        <p>Alternatively, you can also directly call the PHP script by using</p>
+        <pre><code>php renderall.php</code></pre>
+        <p>or to execute a single group named <code>Group</code>:</p>
+        <pre><code>php renderall.php --only-group Group</code></pre>
+        <h3 id="drivers">Drivers</h3>
+        <p>This script uses the concept of drivers, with each driver basically providing one type of block.
+        A good rule of thumb is: One driver for each block model.</p>
+        <p>All drivers live inside of the <code>drivers/</code> folder. Each driver consists of one <code>blend</code>file and
+        one accompanying Python script. The <code>blend</code>file contains the block model and node setup for
+        texturing. The Python script gets run by Blender and populates certain node values and then
+        renders the scene to a specified output file.</p>
+        <h3 id="block-list">Block list</h3>
+        <p>All blocks that need to be rendered are listed inside of <code>blocks.txt</code>. This file can be easily
+        opened by any text editor. Please make sure to set your editor to indent using <strong>Tabs</strong> at <strong>8 characters wide</strong>. If you are using a text editor which supports modelines (such as Vim or VSCode with the <a href="https://marketplace.visualstudio.com/items?itemName=chrislajoie.vscode-modelines">Modelines extension</a>) this should happen automatically.</p>
+        <p>The file has a pretty straight-forward structure:  </p>
+        <ul>
+        <li>Lines end with <code>\n</code></li>
+        <li>Line comments start with either <code>#</code> or <code>//</code> (the line has to start with the comment token)</li>
+        <li>There are no block comments</li>
+        <li>Empty lines are ignored (an empty line is a line with just 0 or more ASCII whitespace characters (namely <code>SPACE</code>, <code>\t</code>, <code>\r</code> or <code>\n</code>))</li>
+        <li>Each line contains either a comment, a block entry or a group delimiter</li>
+        <li>A block entry line contains the following fields, each separated by one or more <code>\t</code>, in the following order:<ul>
+        <li>The driver name (for a full list of drivers, see <code>doc/drivers.txt</code>)</li>
+        <li>The output file path (including <code>.png</code> extension) relative to this folder. These files will be placed inside of an <code>output/&lt;resolution&gt;</code> folder. So <code>allotment/elder_planks.png</code> for example might result in <code>output/256/allotment/elder_planks.png</code>. (More on resolution sub folders below)</li>
+        <li>One or more texture identifiers. These consist of a <em>texture source</em> and a <em>texture name</em>. The identifier has the following format: <code>&lt;source&gt;:&lt;name&gt;</code>. Sources are folders in which textures files can be referenced from and are defined inside of <code>vars.txt</code> (see below). In addition to these sources, drivers also should provide a source called <code>in</code>, which points to the <code>input/</code> folder. This can be used to reference textures which are not part of Minecraft or a mod.</li>
+        </ul>
+        </li>
+        <li>A group delimiter looks like this:<ul>
+        <li><code>[begin: MyGroupName]</code> to start a group named <code>MyGroupName</code></li>
+        <li><code>[end: MyGroupName]</code> to end a group named <code>MyGroupName</code></li>
+        </ul>
+        </li>
+        <li>Groups cannot be nested</li>
+        <li>By default, all groups are executed. However, a only single group can be executed by adding the command line switch <code>--only-group</code> to the
+        command, like mentioned above.</li>
+        </ul>
+        <p>With this in mind, here is an example of how a line in <code>blocks.txt</code> might look like:</p>
+        <pre><code>block	minecraft/oak_log.png	mc:oak_log	mc:oak_log	mc:oak_log_top</code></pre>
+        <h3 id="settings-aka-vars-txt-">Settings (aka <code>vars.txt</code>)</h3>
+        <p>Settings are stored inside a file called <code>vars.txt</code>. This file has a simple key-value pair structure.</p>
+        <ul>
+        <li>Lines end with <code>\n</code></li>
+        <li>Line comments begin with either <code>#</code> or <code>//</code> (the line has to start with the comment token)</li>
+        <li>Empty lines are ignored (an empty line is a line with just 0 or more ASCII whitespace characters (namely <code>SPACE</code>, <code>\t</code>, <code>\r</code> or <code>\n</code>))</li>
+        <li>There are no block comments</li>
+        <li>Each line contains one key-value pair</li>
+        <li>The beginning of a value is denoted by an equals sign (<code>=</code>)</li>
+        <li>Keys cannot contain an equals sign, but values can</li>
+        </ul>
+        <p>The settings file must contain the following settings:</p>
+        <ul>
+        <li><p><code>Resolutions</code><br>Default value: <code>256,32</code><br>Type: List  </p>
+        <p>This contains a list of resolutions (in pixels) which should be output</p>
+        </li>
+        <li><p><code>Brightness.RightFace</code><br>Default value: <code>0.396078431372549</code> (equals to 101&frasl;255)<br>Type: Number  </p>
+        <p>Indicates the brightness of the right block face, where 1.0 is as bright as the texture and 0.0 is fully black.</p>
+        </li>
+        <li><p><code>Brightness.LeftFace</code><br>Default value: <code>0.6862745098039216</code> (equals to 175&frasl;255)<br>Type: Number  </p>
+        <p>Indicates the brightness of the left block face, where 1.0 is as bright as the texture and 0.0 is fully black.</p>
+        </li>
+        <li><p><code>Brightness.TopFace</code><br>Default value: <code>1</code><br>Type: Number  </p>
+        <p>Indicates the brightness of the top block face, where 1.0 is as bright as the texture and 0.0 is fully black.</p>
+        </li>
+        <li><p><code>UseFallbackTexture</code>
+        Default value: <code>False</code><br>Type: Boolean  </p>
+        <p>If <code>True</code> uses a fallback texture (namely <code>missigno.png</code> when a texture cannot be found). If <code>False</code>, skips the block which has missing textures.</p>
+        </li>
+        </ul>
+        <p>In addition to that, the settings file may also contain the following settings:</p>
+        <ul>
+        <li><p><code>TextureDir.&lt;Name&gt;</code><br>Default value: n/a<br>Type: String</p>
+        <p>Defines a texture source named <code>&lt;Name&gt;</code>.</p>
+        </li>
+        </ul>
+        <p>Some drivers might also define their own settings, which will also be read from <code>vars.txt</code>.</p>
+        <p>It is recommended to point a texture source named <code>mc</code> to the blocks folder inside of an unpacked Minecraft installation.</p>
+    </main>
+</body>
+</html>
