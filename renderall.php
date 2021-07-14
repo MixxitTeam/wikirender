@@ -6,6 +6,10 @@ $arg_lookup = [
   "--only-group" => [
     "hasValue" => true,
     "valueType" => "string"
+  ],
+  "--only-drivers" => [
+    "hasValue" => true,
+    "valueType" => "list"
   ]
 ];
 
@@ -37,7 +41,22 @@ for ($i = 1; $i < $argc; ++$i) {
       } else {
         $val = $argv[$i + 1];
         ++$i;
-        $args[$arg] = $val; // TODO Parse type
+        $type = $def["valueType"];
+        switch ($type) {
+          case "int":
+            $args[$arg] = intval($val);
+            break;
+          case "float":
+            $args[$arg] = floatval($val);
+            break;
+          case "list":
+            $args[$arg] = explode(",", $val);
+            break;
+          case "string":
+          default:
+            $args[$arg] = $val;
+            break;
+        }
       }
     } else {
       $args[$arg] = true;
@@ -52,6 +71,14 @@ $onlyGroup = false;
 if (isset($args["--only-group"])) {
   fwrite(STDERR, "Only running group " . $args["--only-group"] . PHP_EOL);
   $onlyGroup = $args["--only-group"];
+}
+
+if (isset($args["--only-drivers"])) {
+  fwrite(STDERR, "Only running drivers: " . implode("; ", $args["--only-drivers"]). PHP_EOL);
+  $allowedDrivers = $args["--only-drivers"];
+  $drivers = array_values(array_filter($drivers, function($i) use ($allowedDrivers) {
+    return in_array($i, $allowedDrivers);
+  }));
 }
 
 foreach ($drivers as $driver) {

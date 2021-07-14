@@ -4,138 +4,200 @@
 # :indentSize=8:tabSize=8:noTabs=false:
 
 # For further explanation of the texture indices, see the documentation of the corresponding driver inside of doc/drivers.htm
-# Driver	Output file		      Textures: 0				1				2
+# Driver	Output file			      Textures: 0				1				2
 
 # - Vanilla
-block		minecraft/oak_log.png			mc:oak_log			mc:oak_log			mc:oak_log_top
-block		minecraft/birch_log.png			mc:birch_log			mc:birch_log			mc:birch_log_top
-block		minecraft/jungle_log.png		mc:jungle_log			mc:jungle_log			mc:jungle_log_top
-block		minecraft/spruce_log.png		mc:spruce_log			mc:spruce_log			mc:spruce_log_top
-block		minecraft/acacia_log.png		mc:acacia_log			mc:acacia_log			mc:acacia_log_top
-block		minecraft/dark_oak_log.png		mc:dark_oak_log			mc:dark_oak_log			mc:dark_oak_log_top
-block		minecraft/crimson_stem.png		in:crimson_stem			in:crimson_stem			mc:crimson_stem_top
-block		minecraft/warped_stem.png		in:warped_stem			in:warped_stem			mc:warped_stem_top
+block		minecraft/oak_log.png				mc:oak_log			mc:oak_log			mc:oak_log_top
+block		minecraft/birch_log.png				mc:birch_log			mc:birch_log			mc:birch_log_top
+block		minecraft/jungle_log.png			mc:jungle_log			mc:jungle_log			mc:jungle_log_top
+block		minecraft/spruce_log.png			mc:spruce_log			mc:spruce_log			mc:spruce_log_top
+block		minecraft/acacia_log.png			mc:acacia_log			mc:acacia_log			mc:acacia_log_top
+block		minecraft/dark_oak_log.png			mc:dark_oak_log			mc:dark_oak_log			mc:dark_oak_log_top
+block		minecraft/crimson_stem.png			in:crimson_stem			in:crimson_stem			mc:crimson_stem_top
+block		minecraft/warped_stem.png			in:warped_stem			in:warped_stem			mc:warped_stem_top
 
-block		minecraft/stripped_oak_log.png		mc:stripped_oak_log		mc:stripped_oak_log		mc:stripped_oak_log_top
-block		minecraft/stripped_birch_log.png	mc:stripped_birch_log		mc:stripped_birch_log		mc:stripped_birch_log_top
-block		minecraft/stripped_jungle_log.png	mc:stripped_jungle_log		mc:stripped_jungle_log		mc:stripped_jungle_log_top
-block		minecraft/stripped_spruce_log.png	mc:stripped_spruce_log		mc:stripped_spruce_log		mc:stripped_spruce_log_top
-block		minecraft/stripped_acacia_log.png	mc:stripped_acacia_log		mc:stripped_acacia_log		mc:stripped_acacia_log_top
-block		minecraft/stripped_dark_oak_log.png	mc:stripped_dark_oak_log	mc:stripped_dark_oak_log	mc:stripped_dark_oak_log_top
-block		minecraft/stripped_crimson_stem.png	mc:stripped_crimson_stem	mc:stripped_crimson_stem	mc:stripped_crimson_stem_top
-block		minecraft/stripped_warped_stem.png	mc:stripped_warped_stem		mc:stripped_warped_stem		mc:stripped_warped_stem_top
-block		minecraft/oak_wood.png			mc:oak_log			mc:oak_log			mc:oak_log
-block		minecraft/birch_wood.png		mc:birch_log			mc:birch_log			mc:birch_log
-block		minecraft/jungle_wood.png		mc:jungle_log			mc:jungle_log			mc:jungle_log
-block		minecraft/spruce_wood.png		mc:spruce_log			mc:spruce_log			mc:spruce_log
-block		minecraft/acacia_wood.png		mc:acacia_log			mc:acacia_log			mc:acacia_log
-block		minecraft/dark_oak_wood.png		mc:dark_oak_log			mc:dark_oak_log			mc:dark_oak_log
-block		minecraft/crimson_hyphae.png		in:crimson_stem			in:crimson_stem			in:crimson_stem
-block		minecraft/warped_hyphae.png		in:warped_stem			in:warped_stem			in:warped_stem
-block		minecraft/stripped_oak_wood.png		mc:stripped_oak_log		mc:stripped_oak_log		mc:stripped_oak_log
-block		minecraft/stripped_birch_wood.png	mc:stripped_birch_log		mc:stripped_birch_log		mc:stripped_birch_log
-block		minecraft/stripped_jungle_wood.png	mc:stripped_jungle_log		mc:stripped_jungle_log		mc:stripped_jungle_log
-block		minecraft/stripped_spruce_wood.png	mc:stripped_spruce_log		mc:stripped_spruce_log		mc:stripped_spruce_log
-block		minecraft/stripped_acacia_wood.png	mc:stripped_acacia_log		mc:stripped_acacia_log		mc:stripped_acacia_log
-block		minecraft/stripped_dark_oak_wood.png	mc:stripped_dark_oak_log	mc:stripped_dark_oak_log	mc:stripped_dark_oak_log
-block		minecraft/stripped_crimson_hyphae.png	mc:stripped_crimson_stem	mc:stripped_crimson_stem	mc:stripped_crimson_stem
-block		minecraft/stripped_warped_hyphae.png	mc:stripped_warped_stem		mc:stripped_warped_stem		mc:stripped_warped_stem
-block		minecraft/white_concrete.png		mc:white_concrete		mc:white_concrete		mc:white_concrete
-block		minecraft/orange_concrete.png		mc:orange_concrete		mc:orange_concrete		mc:orange_concrete
-block		minecraft/magenta_concrete.png		mc:magenta_concrete		mc:magenta_concrete		mc:magenta_concrete
-block		minecraft/light_blue_concrete.png	mc:light_blue_concrete		mc:light_blue_concrete		mc:light_blue_concrete
-block		minecraft/yellow_concrete.png		mc:yellow_concrete		mc:yellow_concrete		mc:yellow_concrete
-block		minecraft/lime_concrete.png		mc:lime_concrete		mc:lime_concrete		mc:lime_concrete
-block		minecraft/pink_concrete.png		mc:pink_concrete		mc:pink_concrete		mc:pink_concrete
-block		minecraft/gray_concrete.png		mc:gray_concrete		mc:gray_concrete		mc:gray_concrete
-block		minecraft/light_gray_concrete.png	mc:light_gray_concrete		mc:light_gray_concrete		mc:light_gray_concrete
-block		minecraft/cyan_concrete.png		mc:cyan_concrete		mc:cyan_concrete		mc:cyan_concrete
-block		minecraft/purple_concrete.png		mc:purple_concrete		mc:purple_concrete		mc:purple_concrete
-block		minecraft/blue_concrete.png		mc:blue_concrete		mc:blue_concrete		mc:blue_concrete
-block		minecraft/brown_concrete.png		mc:brown_concrete		mc:brown_concrete		mc:brown_concrete
-block		minecraft/green_concrete.png		mc:green_concrete		mc:green_concrete		mc:green_concrete
-block		minecraft/red_concrete.png		mc:red_concrete			mc:red_concrete			mc:red_concrete
-block		minecraft/black_concrete.png		mc:black_concrete		mc:black_concrete		mc:black_concrete
-block		minecraft/acacia_planks.png		mc:acacia_planks		mc:acacia_planks		mc:acacia_planks
-block		minecraft/birch_planks.png		mc:birch_planks			mc:birch_planks			mc:birch_planks
-block		minecraft/crimson_planks.png		mc:crimson_planks		mc:crimson_planks		mc:crimson_planks
-block		minecraft/dark_oak_planks.png		mc:dark_oak_planks		mc:dark_oak_planks		mc:dark_oak_planks
-block		minecraft/jungle_planks.png		mc:jungle_planks		mc:jungle_planks		mc:jungle_planks
-block		minecraft/oak_planks.png		mc:oak_planks			mc:oak_planks			mc:oak_planks
-block		minecraft/spruce_planks.png		mc:spruce_planks		mc:spruce_planks		mc:spruce_planks
-block		minecraft/warped_planks.png		mc:warped_planks		mc:warped_planks		mc:warped_planks
-block		minecraft/sand.png			mc:sand				mc:sand				mc:sand
-block		minecraft/gravel.png			mc:gravel			mc:gravel			mc:gravel
-block		minecraft/gravel.png			mc:gravel			mc:gravel			mc:gravel
-block		minecraft/glass.png			mc:glass			mc:glass			mc:glass
-block		minecraft/white_stained_glass.png	mc:white_stained_glass		mc:white_stained_glass		mc:white_stained_glass
-block		minecraft/orange_stained_glass.png	mc:orange_stained_glass		mc:orange_stained_glass		mc:orange_stained_glass
-block		minecraft/magenta_stained_glass.png	mc:magenta_stained_glass	mc:magenta_stained_glass	mc:magenta_stained_glass
-block		minecraft/light_blue_stained_glass.png	mc:light_blue_stained_glass	mc:light_blue_stained_glass	mc:light_blue_stained_glass
-block		minecraft/yellow_stained_glass.png	mc:yellow_stained_glass		mc:yellow_stained_glass		mc:yellow_stained_glass
-block		minecraft/lime_stained_glass.png	mc:lime_stained_glass		mc:lime_stained_glass		mc:lime_stained_glass
-block		minecraft/pink_stained_glass.png	mc:pink_stained_glass		mc:pink_stained_glass		mc:pink_stained_glass
-block		minecraft/gray_stained_glass.png	mc:gray_stained_glass		mc:gray_stained_glass		mc:gray_stained_glass
-block		minecraft/light_gray_stained_glass.png	mc:light_gray_stained_glass	mc:light_gray_stained_glass	mc:light_gray_stained_glass
-block		minecraft/cyan_stained_glass.png	mc:cyan_stained_glass		mc:cyan_stained_glass		mc:cyan_stained_glass
-block		minecraft/purple_stained_glass.png	mc:purple_stained_glass		mc:purple_stained_glass		mc:purple_stained_glass
-block		minecraft/blue_stained_glass.png	mc:blue_stained_glass		mc:blue_stained_glass		mc:blue_stained_glass
-block		minecraft/brown_stained_glass.png	mc:brown_stained_glass		mc:brown_stained_glass		mc:brown_stained_glass
-block		minecraft/green_stained_glass.png	mc:green_stained_glass		mc:green_stained_glass		mc:green_stained_glass
-block		minecraft/red_stained_glass.png		mc:red_stained_glass		mc:red_stained_glass		mc:red_stained_glass
-block		minecraft/black_stained_glass.png	mc:black_stained_glass		mc:black_stained_glass		mc:black_stained_glass
+block		minecraft/stripped_oak_log.png			mc:stripped_oak_log		mc:stripped_oak_log		mc:stripped_oak_log_top
+block		minecraft/stripped_birch_log.png		mc:stripped_birch_log		mc:stripped_birch_log		mc:stripped_birch_log_top
+block		minecraft/stripped_jungle_log.png		mc:stripped_jungle_log		mc:stripped_jungle_log		mc:stripped_jungle_log_top
+block		minecraft/stripped_spruce_log.png		mc:stripped_spruce_log		mc:stripped_spruce_log		mc:stripped_spruce_log_top
+block		minecraft/stripped_acacia_log.png		mc:stripped_acacia_log		mc:stripped_acacia_log		mc:stripped_acacia_log_top
+block		minecraft/stripped_dark_oak_log.png		mc:stripped_dark_oak_log	mc:stripped_dark_oak_log	mc:stripped_dark_oak_log_top
+block		minecraft/stripped_crimson_stem.png		mc:stripped_crimson_stem	mc:stripped_crimson_stem	mc:stripped_crimson_stem_top
+block		minecraft/stripped_warped_stem.png		mc:stripped_warped_stem		mc:stripped_warped_stem		mc:stripped_warped_stem_top
+block		minecraft/oak_wood.png				mc:oak_log			mc:oak_log			mc:oak_log
+block		minecraft/birch_wood.png			mc:birch_log			mc:birch_log			mc:birch_log
+block		minecraft/jungle_wood.png			mc:jungle_log			mc:jungle_log			mc:jungle_log
+block		minecraft/spruce_wood.png			mc:spruce_log			mc:spruce_log			mc:spruce_log
+block		minecraft/acacia_wood.png			mc:acacia_log			mc:acacia_log			mc:acacia_log
+block		minecraft/dark_oak_wood.png			mc:dark_oak_log			mc:dark_oak_log			mc:dark_oak_log
+block		minecraft/crimson_hyphae.png			in:crimson_stem			in:crimson_stem			in:crimson_stem
+block		minecraft/warped_hyphae.png			in:warped_stem			in:warped_stem			in:warped_stem
+block		minecraft/stripped_oak_wood.png			mc:stripped_oak_log		mc:stripped_oak_log		mc:stripped_oak_log
+block		minecraft/stripped_birch_wood.png		mc:stripped_birch_log		mc:stripped_birch_log		mc:stripped_birch_log
+block		minecraft/stripped_jungle_wood.png		mc:stripped_jungle_log		mc:stripped_jungle_log		mc:stripped_jungle_log
+block		minecraft/stripped_spruce_wood.png		mc:stripped_spruce_log		mc:stripped_spruce_log		mc:stripped_spruce_log
+block		minecraft/stripped_acacia_wood.png		mc:stripped_acacia_log		mc:stripped_acacia_log		mc:stripped_acacia_log
+block		minecraft/stripped_dark_oak_wood.png		mc:stripped_dark_oak_log	mc:stripped_dark_oak_log	mc:stripped_dark_oak_log
+block		minecraft/stripped_crimson_hyphae.png		mc:stripped_crimson_stem	mc:stripped_crimson_stem	mc:stripped_crimson_stem
+block		minecraft/stripped_warped_hyphae.png		mc:stripped_warped_stem		mc:stripped_warped_stem		mc:stripped_warped_stem
+block		minecraft/white_concrete.png			mc:white_concrete		mc:white_concrete		mc:white_concrete
+block		minecraft/orange_concrete.png			mc:orange_concrete		mc:orange_concrete		mc:orange_concrete
+block		minecraft/magenta_concrete.png			mc:magenta_concrete		mc:magenta_concrete		mc:magenta_concrete
+block		minecraft/light_blue_concrete.png		mc:light_blue_concrete		mc:light_blue_concrete		mc:light_blue_concrete
+block		minecraft/yellow_concrete.png			mc:yellow_concrete		mc:yellow_concrete		mc:yellow_concrete
+block		minecraft/lime_concrete.png			mc:lime_concrete		mc:lime_concrete		mc:lime_concrete
+block		minecraft/pink_concrete.png			mc:pink_concrete		mc:pink_concrete		mc:pink_concrete
+block		minecraft/gray_concrete.png			mc:gray_concrete		mc:gray_concrete		mc:gray_concrete
+block		minecraft/light_gray_concrete.png		mc:light_gray_concrete		mc:light_gray_concrete		mc:light_gray_concrete
+block		minecraft/cyan_concrete.png			mc:cyan_concrete		mc:cyan_concrete		mc:cyan_concrete
+block		minecraft/purple_concrete.png			mc:purple_concrete		mc:purple_concrete		mc:purple_concrete
+block		minecraft/blue_concrete.png			mc:blue_concrete		mc:blue_concrete		mc:blue_concrete
+block		minecraft/brown_concrete.png			mc:brown_concrete		mc:brown_concrete		mc:brown_concrete
+block		minecraft/green_concrete.png			mc:green_concrete		mc:green_concrete		mc:green_concrete
+block		minecraft/red_concrete.png			mc:red_concrete			mc:red_concrete			mc:red_concrete
+block		minecraft/black_concrete.png			mc:black_concrete		mc:black_concrete		mc:black_concrete
+block		minecraft/acacia_planks.png			mc:acacia_planks		mc:acacia_planks		mc:acacia_planks
+block		minecraft/birch_planks.png			mc:birch_planks			mc:birch_planks			mc:birch_planks
+block		minecraft/crimson_planks.png			mc:crimson_planks		mc:crimson_planks		mc:crimson_planks
+block		minecraft/dark_oak_planks.png			mc:dark_oak_planks		mc:dark_oak_planks		mc:dark_oak_planks
+block		minecraft/jungle_planks.png			mc:jungle_planks		mc:jungle_planks		mc:jungle_planks
+block		minecraft/oak_planks.png			mc:oak_planks			mc:oak_planks			mc:oak_planks
+block		minecraft/spruce_planks.png			mc:spruce_planks		mc:spruce_planks		mc:spruce_planks
+block		minecraft/warped_planks.png			mc:warped_planks		mc:warped_planks		mc:warped_planks
+block		minecraft/sand.png				mc:sand				mc:sand				mc:sand
+block		minecraft/gravel.png				mc:gravel			mc:gravel			mc:gravel
+block		minecraft/gravel.png				mc:gravel			mc:gravel			mc:gravel
+block		minecraft/glass.png				mc:glass			mc:glass			mc:glass
+block		minecraft/white_stained_glass.png		mc:white_stained_glass		mc:white_stained_glass		mc:white_stained_glass
+block		minecraft/orange_stained_glass.png		mc:orange_stained_glass		mc:orange_stained_glass		mc:orange_stained_glass
+block		minecraft/magenta_stained_glass.png		mc:magenta_stained_glass	mc:magenta_stained_glass	mc:magenta_stained_glass
+block		minecraft/light_blue_stained_glass.png		mc:light_blue_stained_glass	mc:light_blue_stained_glass	mc:light_blue_stained_glass
+block		minecraft/yellow_stained_glass.png		mc:yellow_stained_glass		mc:yellow_stained_glass		mc:yellow_stained_glass
+block		minecraft/lime_stained_glass.png		mc:lime_stained_glass		mc:lime_stained_glass		mc:lime_stained_glass
+block		minecraft/pink_stained_glass.png		mc:pink_stained_glass		mc:pink_stained_glass		mc:pink_stained_glass
+block		minecraft/gray_stained_glass.png		mc:gray_stained_glass		mc:gray_stained_glass		mc:gray_stained_glass
+block		minecraft/light_gray_stained_glass.png		mc:light_gray_stained_glass	mc:light_gray_stained_glass	mc:light_gray_stained_glass
+block		minecraft/cyan_stained_glass.png		mc:cyan_stained_glass		mc:cyan_stained_glass		mc:cyan_stained_glass
+block		minecraft/purple_stained_glass.png		mc:purple_stained_glass		mc:purple_stained_glass		mc:purple_stained_glass
+block		minecraft/blue_stained_glass.png		mc:blue_stained_glass		mc:blue_stained_glass		mc:blue_stained_glass
+block		minecraft/brown_stained_glass.png		mc:brown_stained_glass		mc:brown_stained_glass		mc:brown_stained_glass
+block		minecraft/green_stained_glass.png		mc:green_stained_glass		mc:green_stained_glass		mc:green_stained_glass
+block		minecraft/red_stained_glass.png			mc:red_stained_glass		mc:red_stained_glass		mc:red_stained_glass
+block		minecraft/black_stained_glass.png		mc:black_stained_glass		mc:black_stained_glass		mc:black_stained_glass
 
 # - Allotment
-block		allotment/bamboo_block.png		am:bamboo_block_side		am:bamboo_block_side		am:bamboo_block_end
-block		allotment/dried_bamboo_block.png	am:dried_bamboo_block_side	am:dried_bamboo_block_side	am:dried_bamboo_block_end
-block		allotment/elder_planks.png		am:elder_planks			am:elder_planks			am:elder_planks
-block		allotment/chipped_elder_planks.png	am:chipped_elder_planks		am:chipped_elder_planks		am:chipped_elder_planks
-block		allotment/chipped_acacia_planks.png	am:chipped_acacia_planks	am:chipped_acacia_planks	am:chipped_acacia_planks
-block		allotment/chipped_birch_planks.png	am:chipped_birch_planks		am:chipped_birch_planks		am:chipped_birch_planks
-block		allotment/chipped_crimson_planks.png	am:chipped_crimson_planks	am:chipped_crimson_planks	am:chipped_crimson_planks
-block		allotment/chipped_dark_oak_planks.png	am:chipped_dark_oak_planks	am:chipped_dark_oak_planks	am:chipped_dark_oak_planks
-block		allotment/chipped_jungle_planks.png	am:chipped_jungle_planks	am:chipped_jungle_planks	am:chipped_jungle_planks
-block		allotment/chipped_oak_planks.png	am:chipped_oak_planks		am:chipped_oak_planks		am:chipped_oak_planks
-block		allotment/chipped_spruce_planks.png	am:chipped_spruce_planks	am:chipped_spruce_planks	am:chipped_spruce_planks
-block		allotment/chipped_warped_planks.png	am:chipped_warped_planks	am:chipped_warped_planks	am:chipped_warped_planks
-block		allotment/weathered_elder_planks.png	am:weathered_elder_planks	am:weathered_elder_planks	am:weathered_elder_planks
-block		allotment/weathered_acacia_planks.png	am:weathered_acacia_planks	am:weathered_acacia_planks	am:weathered_acacia_planks
-block		allotment/weathered_birch_planks.png	am:weathered_birch_planks	am:weathered_birch_planks	am:weathered_birch_planks
-block		allotment/weathered_crimson_planks.png	am:weathered_crimson_planks	am:weathered_crimson_planks	am:weathered_crimson_planks
-block		allotment/weathered_dark_oak_planks.png	am:weathered_dark_oak_planks	am:weathered_dark_oak_planks	am:weathered_dark_oak_planks
-block		allotment/weathered_jungle_planks.png	am:weathered_jungle_planks	am:weathered_jungle_planks	am:weathered_jungle_planks
-block		allotment/weathered_oak_planks.png	am:weathered_oak_planks		am:weathered_oak_planks		am:weathered_oak_planks
-block		allotment/weathered_spruce_planks.png	am:weathered_spruce_planks	am:weathered_spruce_planks	am:weathered_spruce_planks
-block		allotment/weathered_warped_planks.png	am:weathered_warped_planks	am:weathered_warped_planks	am:weathered_warped_planks
-block		allotment/corrugated_iron.png		am:corrugated_iron		am:corrugated_iron		am:corrugated_iron
-block		allotment/cracked_clay.png		am:cracked_clay			am:cracked_clay			am:cracked_clay
-block		allotment/elder_log.png			am:elder_log			am:elder_log			am:elder_log_top
-block		allotment/stripped_elder_log.png	am:stripped_elder_log		am:stripped_elder_log		am:stripped_elder_log_top
-block		allotment/elder_wood.png		am:elder_log			am:elder_log			am:elder_log
-block		allotment/stripped_elder_wood.png	am:stripped_elder_log		am:stripped_elder_log		am:stripped_elder_log
-block		allotment/ferralsol.png			am:ferralsol			am:ferralsol			am:ferralsol
-block		allotment/humus.png			am:humus			am:humus			am:humus
-block		allotment/mulch.png			am:mulch			am:mulch			am:mulch
-block		allotment/pincussion_moss.png		am:pincussion_moss		am:pincussion_moss		am:pincussion_moss
-block		allotment/spanish_moss.png		am:spanish_moss			am:spanish_moss			am:spanish_moss
-block		allotment/straw_block.png		am:straw_block			am:straw_block			am:straw_block
-block		allotment/elder_leaves.png		in:elder_leaves			in:elder_leaves			in:elder_leaves
-block		allotment/lawn_block.png		in:grass_block_side		in:grass_block_side		in:lawn_block
+block		allotment/bamboo_block.png			am:bamboo_block_side		am:bamboo_block_side		am:bamboo_block_end
+block		allotment/dried_bamboo_block.png		am:dried_bamboo_block_side	am:dried_bamboo_block_side	am:dried_bamboo_block_end
+block		allotment/elder_planks.png			am:elder_planks			am:elder_planks			am:elder_planks
+block		allotment/chipped_elder_planks.png		am:chipped_elder_planks		am:chipped_elder_planks		am:chipped_elder_planks
+block		allotment/chipped_acacia_planks.png		am:chipped_acacia_planks	am:chipped_acacia_planks	am:chipped_acacia_planks
+block		allotment/chipped_birch_planks.png		am:chipped_birch_planks		am:chipped_birch_planks		am:chipped_birch_planks
+block		allotment/chipped_crimson_planks.png		am:chipped_crimson_planks	am:chipped_crimson_planks	am:chipped_crimson_planks
+block		allotment/chipped_dark_oak_planks.png		am:chipped_dark_oak_planks	am:chipped_dark_oak_planks	am:chipped_dark_oak_planks
+block		allotment/chipped_jungle_planks.png		am:chipped_jungle_planks	am:chipped_jungle_planks	am:chipped_jungle_planks
+block		allotment/chipped_oak_planks.png		am:chipped_oak_planks		am:chipped_oak_planks		am:chipped_oak_planks
+block		allotment/chipped_spruce_planks.png		am:chipped_spruce_planks	am:chipped_spruce_planks	am:chipped_spruce_planks
+block		allotment/chipped_warped_planks.png		am:chipped_warped_planks	am:chipped_warped_planks	am:chipped_warped_planks
+block		allotment/weathered_elder_planks.png		am:weathered_elder_planks	am:weathered_elder_planks	am:weathered_elder_planks
+block		allotment/weathered_acacia_planks.png		am:weathered_acacia_planks	am:weathered_acacia_planks	am:weathered_acacia_planks
+block		allotment/weathered_birch_planks.png		am:weathered_birch_planks	am:weathered_birch_planks	am:weathered_birch_planks
+block		allotment/weathered_crimson_planks.png		am:weathered_crimson_planks	am:weathered_crimson_planks	am:weathered_crimson_planks
+block		allotment/weathered_dark_oak_planks.png		am:weathered_dark_oak_planks	am:weathered_dark_oak_planks	am:weathered_dark_oak_planks
+block		allotment/weathered_jungle_planks.png		am:weathered_jungle_planks	am:weathered_jungle_planks	am:weathered_jungle_planks
+block		allotment/weathered_oak_planks.png		am:weathered_oak_planks		am:weathered_oak_planks		am:weathered_oak_planks
+block		allotment/weathered_spruce_planks.png		am:weathered_spruce_planks	am:weathered_spruce_planks	am:weathered_spruce_planks
+block		allotment/weathered_warped_planks.png		am:weathered_warped_planks	am:weathered_warped_planks	am:weathered_warped_planks
+block		allotment/corrugated_iron.png			am:corrugated_iron		am:corrugated_iron		am:corrugated_iron
+block		allotment/cracked_clay.png			am:cracked_clay			am:cracked_clay			am:cracked_clay
+block		allotment/elder_log.png				am:elder_log			am:elder_log			am:elder_log_top
+block		allotment/stripped_elder_log.png		am:stripped_elder_log		am:stripped_elder_log		am:stripped_elder_log_top
+block		allotment/elder_wood.png			am:elder_log			am:elder_log			am:elder_log
+block		allotment/stripped_elder_wood.png		am:stripped_elder_log		am:stripped_elder_log		am:stripped_elder_log
+block		allotment/ferralsol.png				am:ferralsol			am:ferralsol			am:ferralsol
+block		allotment/humus.png				am:humus			am:humus			am:humus
+block		allotment/mulch.png				am:mulch			am:mulch			am:mulch
+block		allotment/pincussion_moss.png			am:pincussion_moss		am:pincussion_moss		am:pincussion_moss
+block		allotment/spanish_moss.png			am:spanish_moss			am:spanish_moss			am:spanish_moss
+block		allotment/straw_block.png			am:straw_block			am:straw_block			am:straw_block
+block		allotment/elder_leaves.png			in:elder_leaves			in:elder_leaves			in:elder_leaves
+block		allotment/lawn_block.png			in:grass_block_side		in:grass_block_side		in:lawn_block
 
-flower		allotment/anemone.png			am:anemone
+flower		allotment/forget_me_not.png			am:forget_me_not
+flower		allotment/small_peony.png			am:small_peony
+flower		allotment/coral_small_peony.png			am:coral_small_peony
+flower		allotment/blue_hyacinth.png			am:blue_hyacinth
+flower		allotment/cream_hyacinth.png			am:cream_hyacinth
+flower		allotment/orange_hyacinth.png			am:orange_hyacinth
+flower		allotment/red_hyacinth.png			am:red_hyacinth
+flower		allotment/violet_hyacinth.png			am:violet_hyacinth
+flower		allotment/white_hyacinth.png			am:white_hyacinth
+flower		allotment/yellow_hyacinth.png			am:yellow_hyacinth
+flower		allotment/lantana.png				am:lantana
+flower		allotment/actaea_racemosa.png			am:actaea_racemosa
+flower		allotment/marigold.png				am:marigold
+flower		allotment/blue_convolvulus_tricolor.png		am:blue_convolvulus_tricolor
+flower		allotment/red_convolvulus_tricolor.png		am:red_convolvulus_tricolor
+flower		allotment/yellow_hollyhock.png			am:yellow_hollyhock
+flower		allotment/blue_agapanthus.png			am:blue_agapanthus
+flower		allotment/pink_agapanthus.png			am:pink_agapanthus
+flower		allotment/white_agapanthus.png			am:white_agapanthus
+flower		allotment/anemone.png				am:anemone
+flower		allotment/love_in_a_mist.png			am:love_in_a_mist
+flower		allotment/geranium.png				am:geranium
+flower		allotment/green_carnation.png			am:green_carnation
+flower		allotment/red_anthurium.png			am:red_anthurium
+flower		allotment/boletus_edulis.png			am:boletus_edulis
+flower		allotment/button_mushroom.png			am:button_mushroom
+flower		allotment/chanterelle.png			am:chanterelle
+flower		allotment/anigozanthos_manglesii.png		am:anigozanthos_manglesii
+flower		allotment/cookeina.png				am:cookeina
+flower		allotment/guzmania.png				am:guzmania
+flower		allotment/tillandsia_cyanea.png			am:tillandsia_cyanea
+flower		allotment/tropical_orchid.png			am:tropical_orchid
+flower		allotment/violet.png				am:violet
+flower		allotment/westringia.png			am:westringia
+flower		allotment/white_anthurium.png			am:white_anthurium
+flower		allotment/white_narcissus.png			am:white_narcissus
+flower		allotment/yellow_narcissus.png			am:yellow_narcissus
+flower		allotment/false_shamrock.png			am:false_shamrock
 
-slab		allotment/bamboo_slab.png		am:bamboo_block_side		am:bamboo_block_side		am:bamboo_block_end
-slab		allotment/dried_bamboo_slab.png		am:dried_bamboo_block_side	am:dried_bamboo_block_side	am:dried_bamboo_block_end
-slab		allotment/elder_slab.png		am:elder_planks			am:elder_planks			am:elder_planks
+slab		allotment/bamboo_slab.png			am:bamboo_block_side		am:bamboo_block_side		am:bamboo_block_end
+slab		allotment/dried_bamboo_slab.png			am:dried_bamboo_block_side	am:dried_bamboo_block_side	am:dried_bamboo_block_end
+slab		allotment/elder_slab.png			am:elder_planks			am:elder_planks			am:elder_planks
 
-tallflower	allotment/tall_thistle.png		am:tall_thistle_top		am:tall_thistle_bottom
+[begin: tallflower]
+tallflower	allotment/crown_imperial.png			am:crown_imperial_top		am:crown_imperial_bottom
+tallflower	allotment/orange_gladioli.png			am:orange_gladioli_top		am:orange_gladioli_bottom
+tallflower	allotment/purple_fountain_grass.png		am:purple_fountain_grass_top	am:purple_fountain_grass_bottom
+tallflower	allotment/purple_loosestrife.png		am:purple_loosestrife_top	am:purple_loosestrife_bottom
+tallflower	allotment/reed.png				am:reed_top			am:reed_bottom
+tallflower	allotment/tall_desert_rose.png			am:tall_desert_rose_top		am:tall_desert_rose_bottom
+tallflower	allotment/tall_thistle.png			am:tall_thistle_top		am:tall_thistle_bottom
+tallflower	allotment/pampas_grass.png			in:pampas_grass_top_yellow	in:pampas_grass_bottom
+tallflower	allotment/pink_pampas_grass.png			in:pampas_grass_top_pink	in:pampas_grass_bottom
+[end: tallflower]
 
+[begin: thinfence]
+thinfence	allotment/chain_link_fence.png			am:chain_link_fence
+thinfence	allotment/jaktop_criss_cross_fence.png		am:jaktop_criss_cross_fence
+thinfence	allotment/bar_mat_fence.png			am:bar_mat_fence
+[end: thinfence]
+
+[begin: fence]
+fence		allotment/elder_fence.png			am:elder_planks
+fence		allotment/babmboo_fence.png			am:bamboo_block_side
+fence		allotment/dried_babmboo_fence.png		am:dried_bamboo_block_side
+[end: fence]
 
 # - Tests
-[begin: Tests]
-tallflower	test/test0.png				mc:debug			mc:debug2
-block		test/test1.png				mc:doesnotexist			mc:doesnotexist			mc:doesnotexist
-flower		test/test2.png				mc:doesnotexist			mc:doesnotexist			mc:doesnotexist
-slab		test/test3.png				mc:doesnotexist			mc:doesnotexist			mc:doesnotexist
-tallflower	test/test4.png				mc:doesnotexist			mc:doesnotexist			mc:doesnotexist
-[end: Tests]
+[begin: tests]
+tallflower	test/test0.png					mc:debug			mc:debug2
+
+block		test/test1.png					mc:debug			mc:debug			mc:debug
+flower		test/test2.png					mc:debug
+slab		test/test3.png					mc:debug			mc:debug			mc:debug
+tallflower	test/test4.png					mc:debug			mc:debug
+thinfence	test/test5.png					mc:debug
+fence		test/test6.png					mc:debug
+face		test/test7.png					mc:debug
+[end: tests]

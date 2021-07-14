@@ -67,7 +67,7 @@ for ln in lnsBlocks:
             currGroupName = ln[8:-1]
         continue
     if ln.startswith("[end: ") and ln.endswith("]"):
-        if __onlygroup != False and currGroupName != None and ln == "[begin: " + currGroupName + "]":
+        if __onlygroup != False and currGroupName != None and ln == "[end: " + currGroupName + "]":
             # end of group
             currGroupName = None
         continue
